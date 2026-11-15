@@ -25,10 +25,10 @@ feeds:
     name: "Strategic Management Journal"
     url: "https://onlinelibrary.wiley.com/feed/10970266/most-recent"
     enabled: true
-    cond-mat:
-      name: "arXiv cond-mat"
-      url: "https://rss.arxiv.org/rss/cond-mat"
-      enabled: true
+  cond-mat:
+    name: "arXiv cond-mat"
+    url: "https://rss.arxiv.org/rss/cond-mat"
+    enabled: true
   nature:
     name: "Nature"
     url: "https://www.nature.com/nature.rss"
