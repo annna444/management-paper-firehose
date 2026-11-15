@@ -5,10 +5,30 @@ database:
   history_path: "matched_entries_history.db" # historical matches across all topics
 
 feeds:
-  cond-mat:
-    name: "arXiv cond-mat"
-    url: "https://rss.arxiv.org/rss/cond-mat"
+  amj:
+    name: "Academy of Management Journal"
+    url: "https://journals.aom.org/action/showFeed?type=etoc&feed=rss&jc=amj"
     enabled: true
+  amr:
+    name: "Academy of Management Review"
+    url: "https://journals.aom.org/action/showFeed?type=etoc&feed=rss&jc=amr"
+    enabled: true
+  asq:
+    name: "Administrative Science Quarterly"
+    url: "https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=asqa&type=etoc&feed=rss"
+    enabled: true
+  org-science:
+    name: "Organization Science"
+    url: "https://pubsonline.informs.org/action/showFeed?type=etoc&feed=rss&jc=orsc"
+    enabled: true
+  smj:
+    name: "Strategic Management Journal"
+    url: "https://onlinelibrary.wiley.com/feed/10970266/most-recent"
+    enabled: true
+    cond-mat:
+      name: "arXiv cond-mat"
+      url: "https://rss.arxiv.org/rss/cond-mat"
+      enabled: true
   nature:
     name: "Nature"
     url: "https://www.nature.com/nature.rss"
@@ -152,11 +172,11 @@ feeds:
 
 # Priority journals (boosted in ranking)
 priority_journals:
-  - "nature"
-  - "science"
-  - "nat-nanotech"
-  - "nat-mat"
-  - "nat-phys"
+  - "amj"
+  - "amr"
+  - "asq"
+  - "smj"
+  - "org-science"
 priority_journal_boost: 0.20
 
 # Global defaults
