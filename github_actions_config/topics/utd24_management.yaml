@@ -1,0 +1,33 @@
+name: "UTD24 Enterprise Management"
+description: "English-language research on strategy, organizations, innovation, digital transformation, and AI in firms"
+
+feeds:
+  - "amj"
+  - "amr"
+  - "asq"
+  - "org-science"
+  - "smj"
+
+filter:
+  # 来源已限定为管理学期刊，先宽筛，避免因关键词规则漏掉相关论文
+  pattern: ".+"
+  fields: ["title", "summary"]
+
+ranking:
+  query: >
+    English-language enterprise and management research on firms,
+    corporate strategy, strategic management, organizational theory,
+    organizational behavior, innovation, entrepreneurship, leadership,
+    corporate governance, digital transformation, artificial intelligence
+    and AI adoption, business models, capabilities, and firm performance.
+  negative_queries: [erratum, correction, reply, corrigendum]
+  model: "all-MiniLM-L6-v2"
+
+abstract_fetch:
+  enabled: true
+  rank_threshold: 0.3
+
+output:
+  filename: "results_utd24_management.html"
+  filename_ranked: "results_utd24_management_ranked.html"
+  archive: true
